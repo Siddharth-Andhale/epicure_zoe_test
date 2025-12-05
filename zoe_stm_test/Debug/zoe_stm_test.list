@@ -416,7 +416,7 @@ int main(void)
  8000510:	2180      	movs	r1, #128	@ 0x80
  8000512:	480a      	ldr	r0, [pc, #40]	@ (800053c <main+0x48>)
  8000514:	f000 fc4c 	bl	8000db0 <HAL_GPIO_WritePin>
-	delay(500000);
+	delay(250000);
  8000518:	4809      	ldr	r0, [pc, #36]	@ (8000540 <main+0x4c>)
  800051a:	f000 f8a3 	bl	8000664 <delay>
 	HAL_GPIO_WritePin(GPIOA, LED1_Pin, GPIO_PIN_SET);
@@ -429,14 +429,14 @@ int main(void)
  800052a:	2180      	movs	r1, #128	@ 0x80
  800052c:	4803      	ldr	r0, [pc, #12]	@ (800053c <main+0x48>)
  800052e:	f000 fc3f 	bl	8000db0 <HAL_GPIO_WritePin>
-	delay(500000);
+	delay(250000);
  8000532:	4803      	ldr	r0, [pc, #12]	@ (8000540 <main+0x4c>)
  8000534:	f000 f896 	bl	8000664 <delay>
 	HAL_GPIO_WritePin(GPIOA, LED1_Pin, GPIO_PIN_RESET);
  8000538:	bf00      	nop
  800053a:	e7e3      	b.n	8000504 <main+0x10>
  800053c:	40020000 	.word	0x40020000
- 8000540:	0007a120 	.word	0x0007a120
+ 8000540:	0003d090 	.word	0x0003d090
 
 08000544 <SystemClock_Config>:
 /**
