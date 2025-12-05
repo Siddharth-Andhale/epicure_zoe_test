@@ -55,6 +55,9 @@ zoe_stm_test.list \
 OBJCOPY_HEX += \
 zoe_stm_test.hex \
 
+OBJCOPY_BIN += \
+zoe_stm_test.bin \
+
 
 # All Target
 all: main-build
@@ -83,12 +86,17 @@ zoe_stm_test.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+zoe_stm_test.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "zoe_stm_test.bin"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) default.size.stdout zoe_stm_test.elf zoe_stm_test.hex zoe_stm_test.list zoe_stm_test.map
+	-$(RM) default.size.stdout zoe_stm_test.bin zoe_stm_test.elf zoe_stm_test.hex zoe_stm_test.list zoe_stm_test.map
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX) $(OBJCOPY_BIN)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'
