@@ -98,10 +98,10 @@ int main(void)
     /* USER CODE END WHILE */
 	HAL_GPIO_WritePin(GPIOA, LED1_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GPIOA, LED2_Pin, GPIO_PIN_SET);
-	delay(500000);
+	delay(250000);
 	HAL_GPIO_WritePin(GPIOA, LED1_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(GPIOA, LED2_Pin, GPIO_PIN_RESET);
-	delay(500000);
+	delay(250000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
