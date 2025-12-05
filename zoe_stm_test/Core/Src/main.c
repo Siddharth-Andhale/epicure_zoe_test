@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include "stm32_config.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -98,10 +98,10 @@ int main(void)
     /* USER CODE END WHILE */
 	HAL_GPIO_WritePin(GPIOA, LED1_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GPIOA, LED2_Pin, GPIO_PIN_SET);
-	delay(250000);
+	delay(STM_DELAY_CYCLES);
 	HAL_GPIO_WritePin(GPIOA, LED1_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(GPIOA, LED2_Pin, GPIO_PIN_RESET);
-	delay(250000);
+	delay(STM_DELAY_CYCLES);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

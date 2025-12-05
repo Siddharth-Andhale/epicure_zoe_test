@@ -49,3 +49,6 @@ __pycache__/
 *.egg-info/
 dist/
 build/
+
+# Custom include files
+zoe_stm_test/Core/Inc/stm32_config.h

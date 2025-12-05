@@ -37,17 +37,17 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_rnglists 000002e9  00000000  00000000  00007848  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  0001ee2c  00000000  00000000  00007b31  2**0
+ 17 .debug_macro  0001ee36  00000000  00000000  00007b31  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00004e54  00000000  00000000  0002695d  2**0
+ 18 .debug_line   00004e66  00000000  00000000  00026967  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000bc4e6  00000000  00000000  0002b7b1  2**0
+ 19 .debug_str    000bc4fe  00000000  00000000  0002b7cd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  000e7c97  2**0
+ 20 .comment      00000043  00000000  00000000  000e7ccb  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00000eb0  00000000  00000000  000e7cdc  2**2
+ 21 .debug_frame  00000eb0  00000000  00000000  000e7d10  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000054  00000000  00000000  000e8b8c  2**0
+ 22 .debug_line_str 00000054  00000000  00000000  000e8bc0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -416,7 +416,7 @@ int main(void)
  8000510:	2180      	movs	r1, #128	@ 0x80
  8000512:	480a      	ldr	r0, [pc, #40]	@ (800053c <main+0x48>)
  8000514:	f000 fc4c 	bl	8000db0 <HAL_GPIO_WritePin>
-	delay(250000);
+	delay(STM_DELAY_CYCLES);
  8000518:	4809      	ldr	r0, [pc, #36]	@ (8000540 <main+0x4c>)
  800051a:	f000 f8a3 	bl	8000664 <delay>
 	HAL_GPIO_WritePin(GPIOA, LED1_Pin, GPIO_PIN_SET);
@@ -429,7 +429,7 @@ int main(void)
  800052a:	2180      	movs	r1, #128	@ 0x80
  800052c:	4803      	ldr	r0, [pc, #12]	@ (800053c <main+0x48>)
  800052e:	f000 fc3f 	bl	8000db0 <HAL_GPIO_WritePin>
-	delay(250000);
+	delay(STM_DELAY_CYCLES);
  8000532:	4803      	ldr	r0, [pc, #12]	@ (8000540 <main+0x4c>)
  8000534:	f000 f896 	bl	8000664 <delay>
 	HAL_GPIO_WritePin(GPIOA, LED1_Pin, GPIO_PIN_RESET);
