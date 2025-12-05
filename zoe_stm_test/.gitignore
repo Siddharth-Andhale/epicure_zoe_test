@@ -1,15 +1,32 @@
-# Build artifacts (generic)
+# Ignore everything in Debug/ EXCEPT .bin and .hex firmware files
+
+zoe_stm_test/Debug/*
+!zoe_stm_test/Debug/*.bin
+!zoe_stm_test/Debug/*.hex
+
+# General build artifacts
 *.o
 *.a
 *.so
 *.dylib
 *.exe
 *.elf
-*.hex
-*.bin
+*.map
+*.list
+*.lst
+*.lis
+*.cyclo
+*.d
+*.su
+*.out
+*.obj
 
-# IDE and editor files
+# STM32CubeIDE internal folders
 .settings/
+.launches/
+RemoteSystemsTempFiles/
+
+# IDE/editor user files
 .cproject
 .project
 .vscode/
@@ -17,33 +34,15 @@
 *.swo
 *~
 .DS_Store
+Thumbs.db
+AppleDouble
+LSOverride
 
-# STM32CubeIDE specific
-.launches/
-RemoteSystemsTempFiles/
-
-# Build output lists / reports
-*.lis
-*.lst
-*.cyclo
-*.d
-*.su
-
-# Backup files
+# Backups
 *.bak
 *.backup
-*~
 
-# Generated files
-*.ioc.bak
-*.mxproject.bak
-
-# OS specific
-Thumbs.db
-.AppleDouble
-.LSOverride
-
-# Python stuff
+# Python build/temp dirs
 __pycache__/
 *.py[cod]
 *$py.class
