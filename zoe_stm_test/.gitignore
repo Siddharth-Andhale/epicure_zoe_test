@@ -1,6 +1,4 @@
-# Build artifacts
-Debug/
-Release/
+# Build artifacts (generic)
 *.o
 *.a
 *.so
@@ -19,25 +17,17 @@ Release/
 *.swo
 *~
 .DS_Store
-*.sublime-workspace
 
 # STM32CubeIDE specific
 .launches/
 RemoteSystemsTempFiles/
 
-# Build output
+# Build output lists / reports
 *.lis
 *.lst
 *.cyclo
 *.d
 *.su
-makefile
-objects.mk
-objects.list
-sources.mk
-
-# Dependencies
-Drivers/STM32F4xx_HAL_Driver/Src/
 
 # Backup files
 *.bak
@@ -53,7 +43,7 @@ Thumbs.db
 .AppleDouble
 .LSOverride
 
-# Python
+# Python stuff
 __pycache__/
 *.py[cod]
 *$py.class
