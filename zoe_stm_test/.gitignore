@@ -1,0 +1,62 @@
+# Build artifacts
+Debug/
+Release/
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.elf
+*.hex
+*.bin
+
+# IDE and editor files
+.settings/
+.cproject
+.project
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-workspace
+
+# STM32CubeIDE specific
+.launches/
+RemoteSystemsTempFiles/
+
+# Build output
+*.lis
+*.lst
+*.cyclo
+*.d
+*.su
+makefile
+objects.mk
+objects.list
+sources.mk
+
+# Dependencies
+Drivers/STM32F4xx_HAL_Driver/Src/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Generated files
+*.ioc.bak
+*.mxproject.bak
+
+# OS specific
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
