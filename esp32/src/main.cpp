@@ -20,10 +20,7 @@ void setup() {
 
   int retries = 0;
   while (WiFi.status() != WL_CONNECTED && retries < 20) {
-    digitalWrite(LED_PIN, HIGH);
-    delay(200);
-    digitalWrite(LED_PIN, LOW);
-    delay(200);
+    delay(500);
     retries++;
   }
 
@@ -42,10 +39,6 @@ void loop() {
     digitalWrite(LED_PIN, LOW);
     delay(500);
   } else {
-    // Blink fast if NOT connected
-    digitalWrite(LED_PIN, HIGH);
-    delay(100);
-    digitalWrite(LED_PIN, LOW);
     delay(100);
   }
 }
