@@ -1,8 +1,8 @@
 # Ignore everything in Debug/ EXCEPT .bin and .hex firmware files
 
-zoe_stm_test/Debug/*
-!zoe_stm_test/Debug/*.bin
-!zoe_stm_test/Debug/*.hex
+Debug/*
+!Debug/*.bin
+!Debug/*.hex
 
 # General build artifacts
 *.o
